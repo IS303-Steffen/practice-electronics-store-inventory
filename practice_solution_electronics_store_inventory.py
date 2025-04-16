@@ -38,6 +38,9 @@ db.connect()
 db.create_tables([InventoryItem])
 
 # just separating out logic into its own function. You could put this anywhere.
+# You could also try converting things into lists and using built in average
+# functions, but I like showing a solution that doesn't require knowing about
+# any extra functions.
 def view_average_price():
     items = InventoryItem.select()
     total_price = 0
